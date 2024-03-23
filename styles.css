@@ -5,6 +5,7 @@
     --loader-background: white;
     
     --button-text-color: white;
+    --question-text-color: black;
     --loader-border-color: white;
     --answer-border-color: white;
 
@@ -23,12 +24,12 @@ body, html {
     font-family: 'Exo 2';
     font-weight: 700;
     font-size: 14px; 
-    overflow-y: hidden;
-    overflow-x: hidden;       
+    overflow-y: hidden; /* Disable vertical scroll */
+    overflow-x: hidden; /* Disable horizontal scroll */         
   }
 
   #preloader {
-    height: 100vh;
+    height: 100%;
     text-align: center;
   }
 
@@ -114,7 +115,9 @@ body, html {
     0% {opacity:0;}
     100% {opacity:1;}
   }
-
+  label {
+    color: var(--question-text-color);
+  }
   .container {
     display: flex;
     justify-content: center;
@@ -183,6 +186,11 @@ body, html {
     }
     .image-section img {
       display: none;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    img {
+        filter: none;
     }
   }
   .footer-container {
