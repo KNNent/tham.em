@@ -116,11 +116,9 @@ body, html {
     0% {opacity:0;}
     100% {opacity:1;}
   }
-  label {
-    color: var(--question-text-color);
-  }
-  input {
-    color: var(--answer-text-color);
+  label, input, option, select {
+    color: black;
+    font-family: 'lexend';
   }
   .container {
     display: flex;
@@ -159,7 +157,7 @@ body, html {
   }
 
   #registrationForm {
-    margin-top: 12px;
+    margin-top: 5px;
   }
   
   input, select, button {
