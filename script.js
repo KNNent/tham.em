@@ -1,3 +1,11 @@
+if (!sessionStorage.getItem("reloaded")) {
+    // Set the reload flag
+    sessionStorage.setItem("reloaded", true);
+    setTimeout(function() {
+      location.reload();
+    }, 1500);
+  }
+
 window.addEventListener('DOMContentLoaded', function() {
     // Set a timeout to hide the preloader after 3 seconds
     var mainContent = document.getElementById('content');
