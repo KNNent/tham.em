@@ -8,6 +8,7 @@
     --question-text-color: black;
     --loader-border-color: white;
     --answer-border-color: white;
+    --answer-text-color: black;
 
     --form-width: 60%;
     --form-max-width: 600px;
@@ -19,14 +20,14 @@
 body, html {
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
     background: var(--background);
-    font-family: 'Exo 2';
+    font-family: 'Lexend';
     font-weight: 700;
     font-size: 14px; 
-    overflow-y: hidden; /* Disable vertical scroll */
-    overflow-x: hidden; /* Disable horizontal scroll */         
+    overflow-y: hidden;  
+    overflow-x: hidden;            
   }
+
 
   #preloader {
     height: 100%;
@@ -118,6 +119,9 @@ body, html {
   label {
     color: var(--question-text-color);
   }
+  input {
+    color: var(--answer-text-color);
+  }
   .container {
     display: flex;
     justify-content: center;
@@ -186,6 +190,15 @@ body, html {
     }
     .image-section img {
       display: none;
+    }
+    html::-webkit-scrollbar {
+        display: none;
+      }
+      
+    /* Hide scrollbar for IE, Edge, and Firefox */
+    html {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
     }
   }
   @media (prefers-color-scheme: dark) {
